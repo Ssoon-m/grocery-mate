@@ -6,12 +6,11 @@
 
 <script setup>
 import { onMounted } from 'vue';
-import { KAKAO_JS_KEY } from '../../utils/key';
+import { KAKAO_JS_KEY } from '@/utils/key';
 onMounted(() => {
-  console.log("import.meta.env", import.meta.env.KAKAO_JS_KEY)
+  console.log("import.meta.env", import.meta.env.VITE_TEST_VAR);
   console.log("KAKAO_JS_KEY", KAKAO_JS_KEY);
 })
 </script>
-
 <style lang="scss" scoped>
 </style>
