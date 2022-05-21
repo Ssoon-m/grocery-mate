@@ -1,18 +1,13 @@
 <template>
   <header>
-    <h1 class="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-
-    <div class="wrapper">
-      <TestComponent msg="You did it!" />
-    </div>
+    <h1 class="text-3xl font-bold underline">Hello world!</h1>
   </header>
+  <div class="wrapper">
+    <test-component msg="You did it!" />
+  </div>
 </template>
-
 <script setup lang="ts">
 import TestComponent from './components/TestComponent.vue';
-// mock service worker 추가 생각해보자
 </script>
 
 <style lang="scss">
