@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import TestComponent from './components/TestComponent.vue';
-</script>
-
 <template>
   <header>
     <h1 class="text-3xl font-bold underline">
@@ -13,6 +9,11 @@ import TestComponent from './components/TestComponent.vue';
     </div>
   </header>
 </template>
+
+<script setup lang="ts">
+import TestComponent from './components/TestComponent.vue';
+// mock service worker 추가 생각해보자
+</script>
 
 <style lang="scss">
 #app {
