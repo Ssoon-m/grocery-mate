@@ -11,9 +11,11 @@
 import { KAKAO_JS_KEY } from '@/utils/key';
 
 const onClickKakaoLogin = () => {
-  console.log('KAKAO_JS_KEY', KAKAO_JS_KEY);
-  if (KAKAO_JS_KEY) {
-    console.log(12);
-  }
+  console.log(window.Kakao);
+  window.Kakao.init(KAKAO_JS_KEY);
+  console.log(Kakao.isInitialized());
+  // if (KAKAO_JS_KEY) {
+  //   console.log(12);
+  // }
 };
 </script>
