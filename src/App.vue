@@ -8,9 +8,8 @@
 </template>
 <script setup lang="ts">
 import TestComponent from './components/TestComponent.vue';
-import { defineStore } from "pinia";
-
-console.log("defineStore", defineStore);
+// import { defineStore } from 'pinia';
+// console.log('defineStore', defineStore);
 </script>
 
 <style lang="scss">
