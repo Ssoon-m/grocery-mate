@@ -7,4 +7,7 @@ export default class ItemList {
       this.items.push(item);
     });
   }
+  add(item: Item) {
+    this.items.push(item);
+  }
 }

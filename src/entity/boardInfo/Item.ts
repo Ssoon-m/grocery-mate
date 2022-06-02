@@ -9,4 +9,7 @@ export default class Item {
     this.subTitle = subTitle;
     this.writer = writer;
   }
+  valid(): boolean {
+    return this.title.startsWith('하하');
+  }
 }
