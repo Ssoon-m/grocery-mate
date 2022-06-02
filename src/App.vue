@@ -1,35 +1,27 @@
 <template>
-  <header>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
-  </header>
-  <div class="wrapper">
-    <test-component msg="You did it!" />
+  <div
+    v-for="(item, i) in itemList.items"
+    :key="i"
+    class="dropdown"
+    @click="onClickItemList"
+  >
+    {{ item }}
   </div>
 </template>
+
 <script setup lang="ts">
-import TestComponent from './components/TestComponent.vue';
-// import { defineStore } from 'pinia';
-// console.log('defineStore', defineStore);
+import { ref } from 'vue';
+import Item from '@/entity/boardInfo/Item';
+import ItemList from '@/entity/boardInfo/ItemList';
+const itemList = ref(
+  new ItemList(
+    new Item(1, '제목입니다1', '서브타이틀입니다1', '작성자1'),
+    new Item(2, '제목입니다2', '서브타이틀입니다2', '작성자2'),
+    new Item(3, '제목입니다3', '서브타이틀입니다3', '작성자3')
+  )
+);
+
+const onClickItemList = () => {};
 </script>
 
-<style lang="scss">
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-}
-</style>
+<style scoped></style>
